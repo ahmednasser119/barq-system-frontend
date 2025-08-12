@@ -11,6 +11,7 @@ import {
     CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
+import SuccessStoriesSection from './success-stories-section';
 
 interface ServiceItem {
     id: number;
@@ -55,7 +56,7 @@ export default function WhatWeDoSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black px-[5%] py-20 overflow-hidden min-h-[200vh] h-fit"
+            className="relative bg-black  px-[5%] py-20 overflow-hidden min-h-[220vh] h-fit"
         >
             {/* Background Images Layering */}
             {/* Ellipse background in the middle */}
@@ -95,13 +96,29 @@ export default function WhatWeDoSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
-                className="absolute top-[45%] right-0  bottom-[-10%] left-[5%] z-5">
+                className="absolute top-[35%] right-0  bottom-[-10%] left-[5%] z-5">
                 <div className="relative w-full h-full ">
                     <Image
                         src="/assets/what_we_do_section/what_we_do_background.png"
                         alt="Background pattern"
                         fill
                         className="h-full max-h-[833px] object-cover"
+                    />
+                </div>
+            </motion.div>
+
+            {/* right background */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 1.3 }}
+                className="absolute top-0 right-[30%] rotate-180  bottom-[-20%] left-0 z-5">
+                <div className="relative w-full h-full">
+                    <Image
+                        src="/assets/what_we_do_section/what_we_do_left_background.png"
+                        alt="Left background"
+                        fill
+                        className="object-cover object-left"
                     />
                 </div>
             </motion.div>
@@ -159,7 +176,7 @@ export default function WhatWeDoSection() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="relative max-w-7xl mx-auto"
+                    className="relative "
                 >
                     <Carousel
                         opts={{
@@ -289,6 +306,9 @@ export default function WhatWeDoSection() {
                     </div>
                 </motion.div>
             </div>
+
+            <SuccessStoriesSection />
+
         </section >
     );
 }

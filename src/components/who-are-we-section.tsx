@@ -62,7 +62,7 @@ export default function WhoAreWeSection() {
                 background: 'linear-gradient(180deg, #051428 23.25%, #000 82.5%), radial-gradient(ellipse at top, rgba(0, 123, 255, 0.1) 0%, transparent 50%), radial-gradient(ellipse at left, rgba(0, 123, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse at right, rgba(0, 123, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse at top, rgba(0, 0, 0, 0.3) 0%, transparent 40%), radial-gradient(ellipse at left, rgba(0, 0, 0, 0.25) 0%, transparent 50%), radial-gradient(ellipse at right, rgba(0, 0, 0, 0.25) 0%, transparent 50%)'
             }}
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="">
                 <div className="flex flex-col lg:flex-row gap-16 items-start">
                     <div className="flex-shrink-0 lg:w-auto w-full">
                         <div className="flex items-start gap-6">
