@@ -7,26 +7,25 @@ import Navbar from './navbar';
 
 export default function HeroSection() {
     return (
-        <section className="relative h-screen w-full overflow-hidden px-[5%]" >
-            {/* Video Background */}
+        <section className="relative h-screen w-full overflow-hidden px-[5%]"
+            style={{
+                background: "linear-gradient(180deg, rgba(0, 76, 164, 0.00) 23.25%, #000 82.5%), linear-gradient(0deg, rgba(0, 123, 255, 0.15) 0%, transparent 30%)"
+            }}
+        >
             <video
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover rotate-180"
             >
                 <source src="/assets/bg-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            {/* Dark overlay for better text readability */}
             <div className="absolute inset-0 bg-black/10" />
-            {/* Navigation Header */}
             <Navbar />
-            {/* Hero Content */}
             <div className="relative z-10 flex items-center">
                 <div className="max-w-[608px]">
-                    {/* Pioneer Badge */}
                     <motion.div
                         className="flex items-center mb-6 space-x-2 rounded-[50px] w-fit py-1 px-3 border-[#ffffff1a] border-[1px] bg-[#FFFFFF0A] backdrop-blur-[1px]"
                         initial={{ opacity: 0, y: 30 }}
@@ -38,8 +37,6 @@ export default function HeroSection() {
                         </div>
                         <span className="text-white/80 text-sm hero-text">Pioneer in Enterprise Security</span>
                     </motion.div>
-
-                    {/* Main Heading */}
                     <motion.h1
                         className="text-white text-[56px] hero-heading leading-tight mb-4"
                         initial={{ opacity: 0, y: 50 }}
@@ -50,8 +47,6 @@ export default function HeroSection() {
                         Backbone for a Secure
                         Digital Future
                     </motion.h1>
-
-                    {/* Description */}
                     <motion.p
                         className="text-white text-[18px] mb-10 leading-relaxed hero-text pr-4"
                         initial={{ opacity: 0, y: 30 }}
@@ -62,8 +57,6 @@ export default function HeroSection() {
                         services — from infrastructure and automation to seamless connectivity
                         and cybersecurity excellence.
                     </motion.p>
-
-                    {/* CTA Button */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
