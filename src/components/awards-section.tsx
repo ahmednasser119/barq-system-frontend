@@ -97,7 +97,7 @@ const AwardsSection = () => {
                     </div>
 
                     {/* Right Side - Award Images Stack */}
-                    <div className="relative flex justify-end gap-4">
+                    <div className="relative flex justify-end gap-4 z-30">
                         <div className="w-full flex flex-col gap-10 max-w-[620px]">
                             {awards.map((award, index) => (
                                 <motion.div
@@ -159,7 +159,7 @@ const AwardsSection = () => {
 
                 {/* Right side gradient */}
                 <div
-                    className="absolute right-0 top-0 bottom-0 w-1/2"
+                    className="absolute right-0 top-0 bottom-0 w-1/2 "
                     style={{
                         background: 'radial-gradient(ellipse at center right, rgba(49, 140, 204, 0.1) 0%, transparent 70%)'
                     }}

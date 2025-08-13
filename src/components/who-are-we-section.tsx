@@ -57,11 +57,24 @@ export default function WhoAreWeSection() {
     return (
         <section
             ref={containerRef}
-            className="px-[5%] pt-16 pb-32 "
-            style={{
-                background: 'linear-gradient(180deg, #051428 23.25%, #000 82.5%), radial-gradient(ellipse at top, rgba(0, 123, 255, 0.1) 0%, transparent 50%), radial-gradient(ellipse at left, rgba(0, 123, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse at right, rgba(0, 123, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse at top, rgba(0, 0, 0, 0.3) 0%, transparent 40%), radial-gradient(ellipse at left, rgba(0, 0, 0, 0.25) 0%, transparent 50%), radial-gradient(ellipse at right, rgba(0, 0, 0, 0.25) 0%, transparent 50%)'
-            }}
+            className="px-[5%] pt-16 pb-32 bg-black "
         >
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                className="absolute top-[55%] right-0 bottom-0 left-0 flex items-center justify-center z-10">
+                <div className="relative w-full h-full  ">
+                    <Image
+                        src="/assets/who_are_we_background.png"
+                        alt="Background ellipse"
+                        width={1660}
+                        height={620}
+                        className="object-contain  rounded-4xl"
+                    />
+                </div>
+            </motion.div>
+
             <div className="">
                 <div className="flex flex-col lg:flex-row gap-16 items-start">
                     <div className="flex-shrink-0 lg:w-auto w-full">
