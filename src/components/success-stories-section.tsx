@@ -129,6 +129,7 @@ export default function SuccessStoriesSection() {
                                 >
                                     <Image
                                         src={successStories.find(story => story.id === 1)?.image || '/placeholder.jpg'}
+                                        alt={successStories.find(story => story.id === 1)?.title || 'Success Story'}
                                         fill
                                         className="object-cover grayscale"
                                     />
