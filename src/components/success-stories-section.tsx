@@ -128,8 +128,7 @@ export default function SuccessStoriesSection() {
                                     transition={{ duration: 0.6, ease: "easeOut" }}
                                 >
                                     <Image
-                                        src={successStories.find(story => story.id === 1)?.image || ''}
-                                        alt={successStories.find(story => story.id === 1)?.title || ''}
+                                        src={successStories.find(story => story.id === 1)?.image || '/placeholder.jpg'}
                                         fill
                                         className="object-cover grayscale"
                                     />
@@ -145,22 +144,29 @@ export default function SuccessStoriesSection() {
                                 />
 
                                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                                    {successStories.find(story => story.id === 1)?.logo && (
-                                        <motion.div
-                                            className="relative w-[256px] h-[186px]"
-                                            animate={{
-                                                scale: hoveredStory === 1 ? 1.1 : 1,
-                                            }}
-                                            transition={{ duration: 0.3, ease: "easeOut" }}
-                                        >
-                                            <Image
-                                                src={successStories.find(story => story.id === 1)?.logo || ''}
-                                                alt={`${successStories.find(story => story.id === 1)?.title || ''} logo`}
-                                                fill
-                                                className="object-contain"
-                                            />
-                                        </motion.div>
-                                    )}
+                                    {(() => {
+                                        const story = successStories.find(story => story.id === 1);
+                                        return story?.logo && story.logo.trim() !== '' ? (
+                                            <motion.div
+                                                className="relative w-[256px] h-[186px]"
+                                                animate={{
+                                                    scale: hoveredStory === 1 ? 1.1 : 1,
+                                                }}
+                                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                            >
+                                                <Image
+                                                    src={story.logo}
+                                                    alt={`${story.title} logo`}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </motion.div>
+                                        ) : (
+                                            <div className="text-white text-[24px] font-bold text-center px-4">
+                                                {story?.title}
+                                            </div>
+                                        );
+                                    })()}
                                 </div>
 
                                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
@@ -186,8 +192,8 @@ export default function SuccessStoriesSection() {
                                     transition={{ duration: 0.6, ease: "easeOut" }}
                                 >
                                     <Image
-                                        src={successStories.find(story => story.id === 2)?.image || ''}
-                                        alt={successStories.find(story => story.id === 2)?.title || ''}
+                                        src={successStories.find(story => story.id === 2)?.image || '/placeholder.jpg'}
+                                        alt={successStories.find(story => story.id === 2)?.title || 'Success Story'}
                                         fill
                                         className="object-cover"
                                     />
@@ -203,22 +209,29 @@ export default function SuccessStoriesSection() {
                                 />
 
                                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                                    {successStories.find(story => story.id === 2)?.logo && (
-                                        <motion.div
-                                            className="relative w-[256px] h-[186px]"
-                                            animate={{
-                                                scale: hoveredStory === 2 ? 1.1 : 1,
-                                            }}
-                                            transition={{ duration: 0.3, ease: "easeOut" }}
-                                        >
-                                            <Image
-                                                src={successStories.find(story => story.id === 2)?.logo}
-                                                alt={`${successStories.find(story => story.id === 2)?.title} logo`}
-                                                fill
-                                                className="object-contain"
-                                            />
-                                        </motion.div>
-                                    )}
+                                    {(() => {
+                                        const story = successStories.find(story => story.id === 2);
+                                        return story?.logo && story.logo.trim() !== '' ? (
+                                            <motion.div
+                                                className="relative w-[256px] h-[186px]"
+                                                animate={{
+                                                    scale: hoveredStory === 2 ? 1.1 : 1,
+                                                }}
+                                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                            >
+                                                <Image
+                                                    src={story.logo}
+                                                    alt={`${story.title} logo`}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </motion.div>
+                                        ) : (
+                                            <div className="text-white text-[24px] font-bold text-center px-4">
+                                                {story?.title}
+                                            </div>
+                                        );
+                                    })()}
                                 </div>
 
                                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
@@ -232,10 +245,10 @@ export default function SuccessStoriesSection() {
                                 transition={{ duration: 0.6, delay: 1.4 }}
                             >
                                 <h3 className="text-white text-[36px] font-bold mb-2">
-                                    {successStories.find(story => story.id === 2)?.title}
+                                    {successStories.find(story => story.id === 2)?.title || 'Success Story'}
                                 </h3>
                                 <p className="text-[#ECEEEE] text-[16px] leading-relaxed mb-4">
-                                    {successStories.find(story => story.id === 2)?.description}
+                                    {successStories.find(story => story.id === 2)?.description || 'Description not available'}
                                 </p>
                                 <button className="inline-flex items-center gap-2 text-[16px] text-[#25B8E4] font-semibold hover:gap-3 transition-all duration-300">
                                     View Full Case Study
@@ -265,8 +278,8 @@ export default function SuccessStoriesSection() {
                                     transition={{ duration: 0.6, ease: "easeOut" }}
                                 >
                                     <Image
-                                        src={successStories.find(story => story.id === 3)?.image}
-                                        alt={successStories.find(story => story.id === 3)?.title}
+                                        src={successStories.find(story => story.id === 3)?.image || '/placeholder.jpg'}
+                                        alt={successStories.find(story => story.id === 3)?.title || 'Success Story'}
                                         fill
                                         className="object-cover grayscale"
                                     />
@@ -282,22 +295,29 @@ export default function SuccessStoriesSection() {
                                 />
 
                                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                                    {successStories.find(story => story.id === 3)?.logo && (
-                                        <motion.div
-                                            className="relative w-[256px] h-[186px]"
-                                            animate={{
-                                                scale: hoveredStory === 3 ? 1.1 : 1,
-                                            }}
-                                            transition={{ duration: 0.3, ease: "easeOut" }}
-                                        >
-                                            <Image
-                                                src={successStories.find(story => story.id === 3)?.logo}
-                                                alt={`${successStories.find(story => story.id === 3)?.title} logo`}
-                                                fill
-                                                className="object-contain"
-                                            />
-                                        </motion.div>
-                                    )}
+                                    {(() => {
+                                        const story = successStories.find(story => story.id === 3);
+                                        return story?.logo && story.logo.trim() !== '' ? (
+                                            <motion.div
+                                                className="relative w-[256px] h-[186px]"
+                                                animate={{
+                                                    scale: hoveredStory === 3 ? 1.1 : 1,
+                                                }}
+                                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                            >
+                                                <Image
+                                                    src={story.logo}
+                                                    alt={`${story.title} logo`}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </motion.div>
+                                        ) : (
+                                            <div className="text-white text-[24px] font-bold text-center px-4">
+                                                {story?.title}
+                                            </div>
+                                        );
+                                    })()}
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
                             </div>
