@@ -48,7 +48,11 @@ export default function SuccessStoriesSection() {
     return (
         <section
             ref={containerRef}
-            className="relative  pt-[120px] pb-20 overflow-hidden"
+            className="relative pt-[120px] pb-20 overflow-hidden"
+            style={{
+                background: `url(/assets/accademy/academy.jpg) lightgray 50% / cover no-repeat, linear-gradient(270deg, rgba(0, 0, 0, 0.00) 30.91%, #000 90.57%), url(/assets/accademy/academy.jpg) lightgray 50% / cover no-repeat`,
+                backgroundBlendMode: 'hue, normal, normal'
+            }}
         >
             {/* Content Layer */}
             <div className="relative z-20">
