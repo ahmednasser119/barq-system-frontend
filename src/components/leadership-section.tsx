@@ -65,7 +65,7 @@ export default function LeadershipSection() {
                 </motion.h2>
             </div>
             <div className="relative z-20  py-14  flex items-center ">
-                <div className="max-w-7xl mx-auto w-full">
+                <div className=" w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <motion.div
                             className="relative"

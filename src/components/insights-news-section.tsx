@@ -40,7 +40,7 @@ const InsightsNewsSection = () => {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black px-[5%]"
+            className="relative bg-black  pb-20 overflow-hidden px-[5%]"
         >
 
 
@@ -96,10 +96,10 @@ const InsightsNewsSection = () => {
                         alt="Right background"
                         width={514}
                         height={514}
-                        className="object-contain absolute  top-[40%] right-[-20%]   w-[514px] h-[514px] "
+                        className="object-contain absolute  top-[47%] right-[-15%]   w-[514px] h-[514px] "
 
                     />
-                    <div className="absolute top-0 right-0 left-0 bottom-0 h-[600px]  bg-gradient-to-br  from-black  to-black"></div>
+                    <div className="absolute top-0 right-0 left-0 bottom-0  2xl:h-0 h-[700px]  bg-gradient-to-br  from-black  to-black"></div>
 
                 </div>
             </motion.div>
@@ -151,7 +151,7 @@ const InsightsNewsSection = () => {
 
             {/* Cards Section */}
             <div className="relative z-20 py-14 flex items-center">
-                <div className="max-w-7xl mx-auto w-full">
+                <div className="w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {insightsData.map((item, index) => (
                             <motion.div
@@ -167,10 +167,8 @@ const InsightsNewsSection = () => {
                                     className="relative w-full max-w-[400px] h-[500px] pb-8 gap-2 flex flex-col justify-end items-center rounded-[24px] overflow-hidden"
                                     style={{
                                         background: `url(${item.image}) `,
-                                        // backgroundBlendMode: 'soft-light, normal'
                                     }}
                                 >
-                                    {/* Content - Title only initially */}
                                     <motion.div
                                         className="relative w-[295px] p-6 rounded-[12px]"
                                         style={{
@@ -220,14 +218,54 @@ const InsightsNewsSection = () => {
                                         </motion.div>
                                     </motion.div>
 
-                                    <div className="relative  h-fit w-[295px] p-4 rounded-[12px] text-white flex items-center gap-2"
+                                    <motion.div
+                                        className="relative h-fit w-[295px] p-4 rounded-[12px] text-white flex items-center justify-between cursor-pointer group overflow-hidden"
                                         style={{
                                             border: "1px solid rgba(255, 255, 255, 0.10)",
                                             background: "rgba(255, 255, 255, 0.04)",
                                             backdropFilter: "blur(10px)"
-                                        }}>
-                                        Read Report <ArrowRightIcon className="w-4 h-4" />
-                                    </div>
+                                        }}
+                                        whileHover={{
+                                            background: "rgba(37, 184, 228, 0.1)",
+                                            borderColor: "rgba(37, 184, 228, 0.3)",
+                                            scale: 1.02
+                                        }}
+                                        transition={{ duration: 0.3, ease: "easeOut" }}
+                                    >
+                                        {/* Shimmer/Flash Effect */}
+                                        <motion.div
+                                            className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                                            style={{
+                                                background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)",
+                                                width: "100%",
+                                                height: "100%",
+                                                transform: "translateX(-100%) skewX(-25deg)"
+                                            }}
+                                            whileHover={{
+                                                transform: "translateX(100%) skewX(-25deg)"
+                                            }}
+                                            transition={{
+                                                duration: 0.6,
+                                                ease: "easeInOut"
+                                            }}
+                                        />
+
+                                        <motion.span
+                                            className="relative z-10 text-white font-medium"
+                                            whileHover={{ color: "#25B8E4" }}
+                                            transition={{ duration: 0.3 }}
+                                        >
+                                            Read Report
+                                        </motion.span>
+
+                                        <motion.div
+                                            className="relative z-10"
+                                            whileHover={{ x: 4 }}
+                                            transition={{ duration: 0.3, ease: "easeOut" }}
+                                        >
+                                            <ArrowRightIcon className="w-4 h-4 group-hover:text-[#25B8E4] transition-colors duration-300" />
+                                        </motion.div>
+                                    </motion.div>
                                 </div>
                             </motion.div>
                         ))}

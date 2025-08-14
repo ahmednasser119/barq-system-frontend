@@ -63,14 +63,14 @@ export default function WhoAreWeSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute top-[55%] right-0 bottom-0 left-0 flex items-center justify-center z-10">
+                className="absolute top-[55%] right-0 bottom-0 left-0  flex items-center justify-center z-10 ">
                 <div className="relative w-full h-full  ">
                     <Image
                         src="/assets/who_are_we_background.png"
                         alt="Background ellipse"
                         width={1660}
                         height={620}
-                        className="object-contain  rounded-4xl"
+                        className="object-contain  2xl:opacity-80  2xl:rounded-full rounded-3xl"
                     />
                 </div>
             </motion.div>
