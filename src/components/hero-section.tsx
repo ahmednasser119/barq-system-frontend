@@ -52,7 +52,6 @@ export default function HeroSection() {
     };
 
     return (
-                autoPlay
         <>
             {/* Loading Screen */}
             <AnimatePresence>
