@@ -97,12 +97,14 @@ const AcademySection = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Button
-                                className="text-white px-6 py-4 text-[18px] h-[56px] transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
+                                className="text-white  flex items-center justify-center gap-[10px] text-[18px] h-[56px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
                                 style={{
                                     background: "linear-gradient(95deg, var(--Secondary-Blue-100, #318CCC) 13.23%, #0040C3 81.63%)",
-                                    boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)"
+                                    boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)",
+                                    padding: "16px 24px"
                                 }}
-                            >Explore BARQ Academy
+                            >
+                                Explore BARQ Academy
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>

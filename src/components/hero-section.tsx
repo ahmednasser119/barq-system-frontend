@@ -13,16 +13,13 @@ export default function HeroSection() {
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
-        // Maximum wait time of 4 seconds regardless of video status
         const maxTimer = setTimeout(() => {
             setIsLoading(false);
-            // Start content animations after loading screen fades
             setTimeout(() => {
                 setShowContent(true);
             }, 300);
         }, 4000);
 
-        // If video loads before 4 seconds, proceed immediately
         if (videoLoaded) {
             clearTimeout(maxTimer);
             const quickTimer = setTimeout(() => {
@@ -100,7 +97,7 @@ export default function HeroSection() {
                 )}
             </AnimatePresence>
 
-            <section className="relative h-screen w-full overflow-hidden px-[5%]"
+            <section className="relative min-h-screen w-full overflow-auto px-[5%]"
                 style={{
                     background: "linear-gradient(180deg, rgba(0, 76, 164, 0.00) 23.25%, #000 82.5%), linear-gradient(0deg, rgba(0, 123, 255, 0.15) 0%, transparent 30%)"
                 }}
@@ -169,14 +166,15 @@ export default function HeroSection() {
                                     transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                                 >
                                     <Button
-                                        className="text-white px-6 py-4 text-[18px] h-[56px] transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
+                                        className="text-white  flex items-center justify-center gap-[10px] text-[18px] h-[56px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
                                         style={{
                                             background: "linear-gradient(95deg, var(--Secondary-Blue-100, #318CCC) 13.23%, #0040C3 81.63%)",
-                                            boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)"
+                                            boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)",
+                                            padding: "16px 24px"
                                         }}
                                     >
                                         Explore Our Solutions
-                                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </Button>

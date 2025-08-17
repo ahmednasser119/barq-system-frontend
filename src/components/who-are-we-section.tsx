@@ -87,17 +87,28 @@ export default function WhoAreWeSection() {
                             >
                                 <Image src="/assets/who-we-are.svg" alt="line" width={200} height={200} className='w-[57px] h-[181px] object-contain' />
                             </motion.div>
-                            <motion.h2
-                                className="text-blue-400 text-2xl font-semibold mb-8"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                transition={{ duration: 0.8, delay: 0.3 }}
-                            >
-                                Who Are We?
-                            </motion.h2>
+
                         </div>
                     </div>
                     <div className="flex-1">
+                        <motion.h2
+                            className=" mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                        >
+                            <span
+                                className="text-[24px] font-bold tracking-wider"
+                                style={{
+                                    background: 'linear-gradient(54deg, #60C1CA 15.02%, #25B8E4 82.83%)',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    backgroundClip: 'text'
+                                }}
+                            >
+                                Who Are We?
+                            </span>
+                        </motion.h2>
                         <motion.p
                             className="text-[#EDEDED] text-[32px] leading-relaxed mb-[86px] "
                             initial={{ opacity: 0, y: 30 }}

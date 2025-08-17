@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight, ArrowRightIcon, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 
@@ -140,11 +140,9 @@ const InsightsNewsSection = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                    <button className="inline-flex items-center gap-2 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-black text-[16px] font-bold transition-all duration-300">
+                    <button className="inline-flex items-center gap-4 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-white text-[16px] font-bold transition-all duration-300">
                         View All
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        <ArrowRight size={18} />
                     </button>
                 </motion.div>
             </div>
@@ -182,7 +180,7 @@ const InsightsNewsSection = () => {
                                         transition={{ duration: 0.25, ease: "easeOut" }}
                                     >
                                         {/* Date */}
-                                        <p className="text-[#25B8E4] text-[14px] font-semibold mb-4">
+                                        <p className="text-white text-[16px]  mb-4">
                                             {item.date}
                                         </p>
 
@@ -234,7 +232,7 @@ const InsightsNewsSection = () => {
                                     >
                                         {/* Shimmer/Flash Effect */}
                                         <motion.div
-                                            className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                                            className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent "
                                             style={{
                                                 background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)",
                                                 width: "100%",
@@ -249,22 +247,20 @@ const InsightsNewsSection = () => {
                                                 ease: "easeInOut"
                                             }}
                                         />
-
-                                        <motion.span
-                                            className="relative z-10 text-white font-medium"
-                                            whileHover={{ color: "#25B8E4" }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            Read Report
-                                        </motion.span>
-
-                                        <motion.div
-                                            className="relative z-10"
-                                            whileHover={{ x: 4 }}
-                                            transition={{ duration: 0.3, ease: "easeOut" }}
-                                        >
-                                            <ArrowRightIcon className="w-4 h-4 group-hover:text-[#25B8E4] transition-colors duration-300" />
-                                        </motion.div>
+                                        <div className='flex items-center gap-2'>
+                                            <motion.span
+                                                className="relative z-10 text-white font-medium group-hover:text-[#25B8E4] transition-colors duration-300"
+                                            >
+                                                Read Report
+                                            </motion.span>
+                                            <motion.div
+                                                className="relative z-10"
+                                                whileHover={{ x: 4 }}
+                                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                            >
+                                                <ChevronRight className="w-4 h-4 group-hover:text-[#25B8E4] transition-colors duration-300" />
+                                            </motion.div>
+                                        </div>
                                     </motion.div>
                                 </div>
                             </motion.div>

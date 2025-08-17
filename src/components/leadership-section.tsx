@@ -66,9 +66,9 @@ export default function LeadershipSection() {
             </div>
             <div className="relative z-20  py-14  flex items-center ">
                 <div className=" w-full">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="flex  gap-12 justify-center ">
                         <motion.div
-                            className="relative"
+                            className="relative w-1/2"
                             initial={{ opacity: 0, x: -50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
@@ -81,42 +81,42 @@ export default function LeadershipSection() {
                                 }}
                             >
                                 <div className="absolute inset-0 bg-[#FFFFFF08] backdrop-blur-[5px] rounded-[24px] border border-[#FFFFFF20]"></div>
-                                <div className="relative p-8">
+                                <div className="relative p-6">
                                     <Image
-                                        src="/assets/leadership.jpg"
+                                        src="/assets/leadership.png"
                                         alt="Leadership"
                                         width={434}
                                         height={620}
-                                        className="w-full h-auto rounded-[16px] object-cover"
+                                        className="w-fit h-[430px] rounded-[16px] object-cover"
                                     />
                                 </div>
                             </div>
                         </motion.div>
                         <motion.div
-                            className="space-y-8"
+                            className="w-1/2"
                             initial={{ opacity: 0, x: 50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
                         >
                             <motion.div
-                                className=""
+                                className=" pt-8"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                                 transition={{ duration: 0.8, delay: 1.2 }}
                             >
-                                <Image src="/assets/quote.svg" alt="quote" width={40} height={40} />
-                                <blockquote className="text-[#FFF] text-[32px] font-light leading-12 pt-2 ">
+                                <Image src="/assets/quote.svg" alt="quote" width={24} height={24} className='h-[24px] w-[24px] ' />
+                                <blockquote className="text-[#FFF] text-[32px] font-light leading-[48px]  ">
                                     &quot;We partner with our customers to enable them to digitally transform their business.
                                     That keeps them ahead of the competition and improves their bottom lines.&quot;
                                 </blockquote>
                             </motion.div>
                             <motion.div
-                                className="space-y-4 pt-8"
+                                className="pt-16"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 transition={{ duration: 0.8, delay: 1.4 }}
                             >
-                                <div className="text-white text-[18px]  font-bold">
+                                <div className="text-white text-[18px] mb-[16px]  font-bold">
                                     Mahmoud Soliman,
                                 </div>
                                 <div className="text-[#B2BABB] text-[18px] font-normal">

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 
@@ -92,11 +93,9 @@ export default function SuccessStoriesSection() {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <button className="inline-flex items-center gap-2 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-white text-[16px] font-bold transition-all duration-300">
+                        <button className="inline-flex items-center gap-4 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-white text-[16px] font-bold transition-all duration-300">
                             View All
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <ArrowRight size={18} />
                         </button>
                     </motion.div>
                 </div>
@@ -136,7 +135,7 @@ export default function SuccessStoriesSection() {
                                 </motion.div>
 
                                 <motion.div
-                                    className="absolute inset-0 bg-blue-500/40"
+                                    className="absolute inset-0 bg-sky-800/30"
                                     initial={{ opacity: 0 }}
                                     animate={{
                                         opacity: hoveredStory === 1 ? 1 : 0
@@ -201,7 +200,7 @@ export default function SuccessStoriesSection() {
                                 </motion.div>
 
                                 <motion.div
-                                    className="absolute inset-0 bg-blue-500/40"
+                                    className="absolute inset-0 bg-sky-800/30"
                                     initial={{ opacity: 0 }}
                                     animate={{
                                         opacity: hoveredStory === 2 ? 1 : 0
@@ -287,7 +286,7 @@ export default function SuccessStoriesSection() {
                                 </motion.div>
 
                                 <motion.div
-                                    className="absolute inset-0 bg-blue-500/40"
+                                    className="absolute inset-0 bg-sky-500/30"
                                     initial={{ opacity: 0 }}
                                     animate={{
                                         opacity: hoveredStory === 3 ? 1 : 0

@@ -12,6 +12,7 @@ import {
     type CarouselApi,
 } from "@/components/ui/carousel";
 import SuccessStoriesSection from './success-stories-section';
+import { ArrowRight } from 'lucide-react';
 
 interface ServiceItem {
     id: number;
@@ -162,11 +163,9 @@ export default function WhatWeDoSection() {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <button className="inline-flex items-center gap-2 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-black text-[16px] font-bold transition-all duration-300">
+                        <button className="inline-flex items-center gap-4 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-white text-[16px] font-bold transition-all duration-300">
                             View All
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <ArrowRight size={18} />
                         </button>
                     </motion.div>
                 </div>
