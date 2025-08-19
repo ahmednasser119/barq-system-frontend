@@ -57,7 +57,7 @@ export default function WhatWeDoSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black  px-[5%] py-20 overflow-hidden min-h-[220vh] h-fit"
+            className="relative bg-black  pl-[5%] py-20 overflow-hidden min-h-[220vh] h-fit"
         >
             {/* Background Images Layering */}
             {/* Ellipse background in the middle */}
@@ -185,11 +185,11 @@ export default function WhatWeDoSection() {
                         className="w-full"
                         setApi={setApi}
                     >
-                        <CarouselContent className="-ml-8">
-                            {services.map((service, index) => (
+                        <CarouselContent className="-ml-8 space-x-8">
+                            {services.map((service, index) =>
                                 <CarouselItem
                                     key={service.id}
-                                    className="pl-8 md:basis-1/2 lg:basis-1/3"
+                                    className="pl-8 md:basis-1/2 lg:basis-1/3 "
                                 >
                                     <motion.div
                                         className="relative group cursor-pointer"
@@ -199,7 +199,7 @@ export default function WhatWeDoSection() {
                                         onHoverStart={() => setHoveredItem(service.id)}
                                         onHoverEnd={() => setHoveredItem(null)}
                                     >
-                                        <div className="relative h-[625px] rounded-[16px] overflow-hidden">
+                                        <div className="relative h-[625px] min-w-[454px] rounded-[16px] overflow-hidden">
                                             {/* Service Image */}
                                             <motion.div
                                                 className="absolute inset-0"
@@ -215,17 +215,22 @@ export default function WhatWeDoSection() {
                                                     className="object-cover"
                                                 />
                                             </motion.div>
-
-                                            {/* Color Filter Overlay - Only on hover */}
+                                            {/* Solution Background Image Overlay - Only on hover */}
                                             <motion.div
-                                                className="absolute inset-0 bg-gradient-to-b from-blue-600/80 via-purple-600/70 to-pink-500/80 mix-blend-multiply"
+                                                className="absolute inset-0 mix-blend-color"
                                                 initial={{ opacity: 0 }}
                                                 animate={{
                                                     opacity: hoveredItem === service.id ? 1 : 0
                                                 }}
                                                 transition={{ duration: 0.3 }}
+                                                style={{
+                                                    backgroundImage: 'url(/assets/solution-background-image.jpg)',
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                    backgroundRepeat: 'no-repeat',
+                                                    backgroundBlendMode: 'soft-light, normal'
+                                                }}
                                             />
-
                                             {/* Dark Gradient Overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
 
@@ -277,7 +282,7 @@ export default function WhatWeDoSection() {
                                         </div>
                                     </motion.div>
                                 </CarouselItem>
-                            ))}
+                            )}
                         </CarouselContent>
                         {/* Custom Navigation Arrows */}
                         {/* <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 bg-transparent text-white hover:border-[#5DADE2] hover:text-[#5DADE2] hover:bg-transparent" /> */}
