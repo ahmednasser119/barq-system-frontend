@@ -40,7 +40,7 @@ const InsightsNewsSection = () => {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black  pb-20 overflow-hidden w-full  z-10"
+            className="relative bg-black  pb-20 overflow-hidden w-full  z-10 px-[5%]"
         >
             {/* Main insights background */}
 
