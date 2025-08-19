@@ -149,13 +149,18 @@ const InsightsNewsSection = () => {
                                 onHoverEnd={() => setHoveredItem(null)}
                             >
                                 <div
-                                    className="relative w-full 2xl:min-w-[405px] h-[500px] pb-8 gap-2 flex flex-col justify-end items-center rounded-[24px] overflow-hidden"
+                                    className="relative w-full xl:min-w-[405px] h-[536px] pb-8 gap-2 flex flex-col justify-end items-center rounded-[24px] overflow-hidden"
                                     style={{
                                         background: `url(${item.image}) `,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundPositionX: index == 0 ? '20%' : 'center',
+                                        backgroundPositionY: 'center',
                                     }}
                                 >
                                     <motion.div
-                                        className="relative mx-8 px-6 py-8 rounded-[12px] max-w-[342px]"
+                                        className="relative mx-8 px-6 py-8 rounded-[12px] max-w-[406px] "
                                         style={{
                                             border: "1px solid rgba(255, 255, 255, 0.10)",
                                             background: "rgba(255, 255, 255, 0.04)",

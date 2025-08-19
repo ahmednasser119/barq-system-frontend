@@ -15,7 +15,7 @@ const AwardsSection = () => {
     });
 
     // Transform scroll progress to overlay opacity (0 to 0.6)
-    const overlayOpacity = useTransform(scrollYProgress, [0, 0.3, 0.5, 0.7, 0.9, 1], [0, 0, 1, 1, 1, 1]);
+    const overlayOpacity = useTransform(scrollYProgress, [0, 0.3, 0.55, 0.7, 0.9, 1], [0, 0, 1, 1, 1, 1]);
 
     const awards = [
         {
@@ -58,9 +58,9 @@ const AwardsSection = () => {
                     </div>
                 </div>
                 {/* Main Layout */}
-                <div className="grid lg:grid-cols-2 gap-8 items-start w-full relative min-h-[100vh] ">
+                <div className="flex items-start gap-8  w-full relative min-h-[100vh] ">
                     {/* Left Side - Charts */}
-                    <div className="mb-16 mt-8 w-full sticky top-8  ">
+                    <div className="mb-16 w-1/2 mt-8  sticky top-8  ">
                         <motion.h3
                             className="mb-6 z-30 "
                             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ const AwardsSection = () => {
                             Awards & Recognition
                         </motion.h2>
                         <motion.p
-                            className="text-[#fff] text-[24px] z-50  max-w-[620px] font-light"
+                            className="text-[#fff] text-[24px] z-50  w-full font-light"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
@@ -104,7 +104,7 @@ const AwardsSection = () => {
                             <div className="relative w-full min-w-[500px] h-[126px] mt-6">
                                 {/* Circular scroll-based overlay */}
                                 <motion.div
-                                    className="absolute  top-0 right-[20%] z-20 w-[600px] h-[120px]"
+                                    className="absolute  top-0 right-[20%] z-20 w-[700px] h-[120px]"
                                     style={{
                                         backgroundColor: 'black',
                                         opacity: overlayOpacity,
@@ -127,8 +127,8 @@ const AwardsSection = () => {
                     </div>
 
                     {/* Right Side - Award Images Stack */}
-                    <div className="relative flex justify-end gap-4 z-30">
-                        <div className="w-full flex flex-col gap-10 max-w-[620px]">
+                    <div className="relative  w-1/2 flex justify-end gap-4 z-30">
+                        <div className=" flex flex-col gap-10 w-full">
                             {awards.map((award, index) => (
                                 <motion.div
                                     key={award.id}
@@ -140,19 +140,23 @@ const AwardsSection = () => {
                                     <div className="relative overflow-hidden rounded-lg border w-full h-full border-gray-700/30">
                                         {/* Award Image */}
                                         <div className="relative w-[310px] h-[350px]">
-                                            <Image
+                                            {/* <Image
                                                 src={award.image}
                                                 alt={award.title}
                                                 width={310}
                                                 height={350}
-                                                className="object-cover w-[310px] h-[350px] transition-transform duration-300 group-hover:scale-105"
-                                            />
+                                                className="object-cover relative bottom-1 w-[310px] h-[350px] transition-transform duration-300 group-hover:scale-105"
+                                            /> */}
 
                                             {/* Gradient Overlay */}
                                             <div
-                                                className="absolute inset-0"
+                                                className="absolute   top-[-2px] left-0 right-0 bottom-0"
                                                 style={{
-                                                    background: 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 100%)'
+                                                    background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.87%, #000 80%), url(${award.image}) lightgray -53.13px -50.453px / 179.4% 106.59% no-repeat`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPositionX: index == 0 ? '20%' : 'center',
+                                                    backgroundPositionY: 'center',
+                                                    backgroundRepeat: 'no-repeat'
                                                 }}
                                             />
 

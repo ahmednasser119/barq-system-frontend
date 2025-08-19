@@ -54,7 +54,7 @@ export default function LeadershipSection() {
             </div>
             <div className="relative z-20">
                 <motion.div
-                    className="flex justify-center pt-20"
+                    className="flex justify-center "
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 1.2 }}

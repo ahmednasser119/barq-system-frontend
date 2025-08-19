@@ -296,7 +296,7 @@ export default function SuccessStoriesSection() {
                                             </motion.div>
                                         ) : (
                                             <div className="text-white text-[24px] font-bold text-center px-4">
-                                                {story?.title}
+
                                             </div>
                                         );
                                     })()}
