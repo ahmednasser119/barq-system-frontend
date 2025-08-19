@@ -1,12 +1,21 @@
 'use client';
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import InsightsNewsSection from './insights-news-section';
 
 const AwardsSection = () => {
     const containerRef = useRef<HTMLElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: '-100px' });
+
+    // Scroll-based animation for the circular overlay
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    // Transform scroll progress to overlay opacity (0 to 0.6)
+    const overlayOpacity = useTransform(scrollYProgress, [0, 0.3, 0.5, 0.7, 0.9, 1], [0, 0, 1, 1, 1, 1]);
 
     const awards = [
         {
@@ -42,7 +51,7 @@ const AwardsSection = () => {
                             alt="Insights background"
                             width={820}
                             height={918}
-                            className="object-cover  absolute top-[40%] right-[-40%] w-full blur-[200px] "
+                            className="object-cover  absolute top-[50%] right-[-40%] w-full blur-[200px] "
                         />
                         {/* Top-right gradient overlay */}
                         <div className="absolute top-[-20%] right-0 w-full h-full bg-gradient-to-bl from-black via-transparent to-transparent"></div>
@@ -53,7 +62,7 @@ const AwardsSection = () => {
                     {/* Left Side - Charts */}
                     <div className="mb-16 mt-8 w-full sticky top-8  ">
                         <motion.h3
-                            className="mb-6"
+                            className="mb-6 z-30 "
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,14 +72,15 @@ const AwardsSection = () => {
                                     background: 'linear-gradient(54deg, #60C1CA 15.02%, #25B8E4 82.83%)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text'
+                                    backgroundClip: 'text',
+                                    zIndex: 30
                                 }}
                             >
                                 Recognized for Excellence
                             </span>
                         </motion.h3>
                         <motion.h2
-                            className="text-white text-[48px] font-bold mb-6"
+                            className="text-white text-[48px]  z-30 font-bold mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
@@ -78,7 +88,7 @@ const AwardsSection = () => {
                             Awards & Recognition
                         </motion.h2>
                         <motion.p
-                            className="text-[#fff] text-[24px]  max-w-[620px] font-light"
+                            className="text-[#fff] text-[24px] z-50  max-w-[620px] font-light"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
@@ -91,23 +101,25 @@ const AwardsSection = () => {
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
                         >
-                            <div className="relative w-full max-w-[600px] h-[200px] mt-6">
-                                <div
-                                    className="w-full h-full"
+                            <div className="relative w-full min-w-[500px] h-[126px] mt-6">
+                                {/* Circular scroll-based overlay */}
+                                <motion.div
+                                    className="absolute  top-0 right-[20%] z-20 w-[600px] h-[120px]"
                                     style={{
-                                        position: 'absolute',
-                                        top: 0,
-                                        right: '250px',
-                                        background: "linear-gradient(90deg, #134A83 0%, #80CDD5 100%)",
-                                        WebkitMask: "url(/assets/awards/awards_left.svg) no-repeat left center/contain",
-                                        mask: "url(/assets/awards/awards_left.svg) no-repeat left center/contain",
-                                        height: '130px',
-                                        width: '100%',
-                                        mixBlendMode: 'multiply',
-                                        WebkitMaskRepeat: 'no-repeat',
-                                        WebkitMaskSize: 'fill',
-                                        WebkitMaskPosition: 'left center',
-                                        WebkitMaskImage: "url(/assets/awards/awards-left-1.svg)"
+                                        backgroundColor: 'black',
+                                        opacity: overlayOpacity,
+                                        transform: "scale(1.5)"
+                                    }}
+                                />
+                                {/* SVG gradient element */}
+                                <div
+                                    className="relative w-full h-full z-10"
+                                    style={{
+                                        background: "linear-gradient(90deg, black 0%, #031228 5%, #0a3e93 20%, #1582a8  60%, #1cabc6 70%, #80CDD5 95%)",
+                                        WebkitMask: "url(/assets/awards/awards_left.svg) no-repeat right center/contain",
+                                        mask: "url(/assets/awards/awards_left.svg) no-repeat right center/contain",
+                                        height: '126px',
+                                        width: '100%'
                                     }}
                                 />
                             </div>
