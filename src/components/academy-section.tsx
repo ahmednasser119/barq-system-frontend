@@ -38,7 +38,7 @@ const AcademySection = () => {
                             className=" mb-6 w-full h-full max-h-[500px] z-30"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
                         >
                             <Image
                                 src={'/assets/accademy/academy-image.png'}
@@ -53,13 +53,13 @@ const AcademySection = () => {
                             className="absolute inset-0 z-40 flex items-center"
                             initial={{ opacity: 0, x: -50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                            transition={{ duration: 0.8, delay: 0.8 }}
+                            transition={{ duration: 0.8, delay: 1.4 }}
                         >
                             <div className="w-1/2 pl-8 md:pl-16">
                                 <motion.h3
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                    transition={{ duration: 0.6, delay: 1.0 }}
+                                    transition={{ duration: 0.6, delay: 1.6 }}
                                 >
                                     <span className=" text-[24px] font-bold mb-4 "
                                         style={{
@@ -77,7 +77,7 @@ const AcademySection = () => {
                                     className="text-white text-[48px] font-bold mb-4"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                    transition={{ duration: 0.6, delay: 1.2 }}
+                                    transition={{ duration: 0.6, delay: 1.8 }}
                                 >
                                     BARQ Academy
                                 </motion.h2>
@@ -85,14 +85,14 @@ const AcademySection = () => {
                                     className="text-gray-300 text-[18px] leading-relaxed mb-10 max-w-md"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                    transition={{ duration: 0.6, delay: 1.4 }}
+                                    transition={{ duration: 0.6, delay: 2.0 }}
                                 >
                                     BARQ Academy is our talent development hub — training future leaders in IT, cybersecurity, and enterprise solutions.
                                 </motion.p>
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                    transition={{ duration: 0.6, delay: 1.6 }}
+                                    transition={{ duration: 0.6, delay: 2.2 }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >

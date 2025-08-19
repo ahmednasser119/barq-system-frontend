@@ -64,7 +64,7 @@ export default function WhatWeDoSection() {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
+                transition={{ duration: 0.6, delay: 1.8 }}
                 className="absolute top-[-40%] right-0 bottom-0 left-0 flex items-center justify-center z-10 ">
                 <div className="relative w-full h-full  ">
                     <Image
@@ -96,7 +96,7 @@ export default function WhatWeDoSection() {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 1.5 }}
+                transition={{ duration: 0.6, delay: 2.1 }}
                 className="absolute top-[35%] right-0  bottom-[-10%] left-[5%] z-5">
                 <div className="relative w-full h-full ">
                     <Image
@@ -112,7 +112,7 @@ export default function WhatWeDoSection() {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 1.3 }}
+                transition={{ duration: 0.6, delay: 1.9 }}
                 className="absolute top-0 right-[35%] rotate-180  bottom-[-10%] left-0 z-5">
                 <div className="relative w-full h-full">
                     <Image
@@ -132,7 +132,7 @@ export default function WhatWeDoSection() {
                         className="inline-block mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
                     >
                         <span
                             className="text-[24px] font-bold tracking-wider"
@@ -151,7 +151,7 @@ export default function WhatWeDoSection() {
                         className="text-white text-[48px] font-bold leading-tight"
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        transition={{ duration: 0.8, delay: 1.0 }}
                     >
                         Our Core Solutions &<br />
                         Services
@@ -161,7 +161,7 @@ export default function WhatWeDoSection() {
                         className="mt-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
                     >
                         <button className="inline-flex items-center gap-4 px-6 py-4 border-[2px] border-[#25B8E4] text-[#25B8E4] rounded-[8px] hover:bg-[#25B8E4] hover:text-white text-[16px] font-bold transition-all duration-300">
                             View All
@@ -174,7 +174,7 @@ export default function WhatWeDoSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    transition={{ duration: 0.8, delay: 1.4 }}
                     className="relative "
                 >
                     <Carousel
@@ -195,7 +195,7 @@ export default function WhatWeDoSection() {
                                         className="relative group cursor-pointer"
                                         initial={{ opacity: 0, y: 50 }}
                                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                                        transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
+                                        transition={{ duration: 0.6, delay: 1.4 + index * 0.2 }}
                                         onHoverStart={() => setHoveredItem(service.id)}
                                         onHoverEnd={() => setHoveredItem(null)}
                                     >

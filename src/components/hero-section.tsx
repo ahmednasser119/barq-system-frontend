@@ -69,11 +69,11 @@ export default function HeroSection() {
                             />
 
                             {/* Loading Text */}
-                            <motion.div
+                            <                                motion.div
                                 className="text-center"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.3 }}
+                                transition={{ duration: 0.6, delay: 0.9 }}
                             >
                                 <Image src="/assets/logo.svg" alt="logo" width={100} height={100} />
                             </motion.div>
@@ -134,44 +134,44 @@ export default function HeroSection() {
                             className="relative z-10 flex items-center"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
                         >
                             <div className="max-w-[608px]">
-                                <motion.div
+                                <                                motion.div
                                     className="flex items-center mb-6 space-x-2 rounded-[50px] w-fit py-1 px-3 border-[#ffffff1a] border-[1px] bg-[#FFFFFF0A] backdrop-blur-[1px]"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                                 >
                                     <div className='p-2 w-10 h-9 rounded-full flex items-center justify-center bg-[#ffffff1a] border-[#ffffff1a] border-[1px]'>
                                         <Shield className='w-4 h-4 text-white' />
                                     </div>
                                     <span className="text-white/80 text-sm hero-text">Pioneer in Enterprise Security</span>
                                 </motion.div>
-                                <motion.h1
+                                <                                motion.h1
                                     className="text-white text-[56px] hero-heading leading-tight mb-4"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                                    transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
                                 >
                                     Your Technology
                                     Backbone for a Secure
                                     Digital Future
                                 </motion.h1>
-                                <motion.p
+                                <                                motion.p
                                     className="text-white text-[18px] mb-10 leading-relaxed hero-text pr-4"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                                    transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                                 >
                                     Empowering enterprises across the MENA region with end-to-end IT
                                     services — from infrastructure and automation to seamless connectivity
                                     and cybersecurity excellence.
                                 </motion.p>
-                                <motion.div
+                                <                                motion.div
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                                    transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
                                 >
                                     <Button
                                         className="text-white  flex items-center justify-center gap-[10px] text-[18px] h-[56px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
