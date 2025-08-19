@@ -150,11 +150,11 @@ const InsightsNewsSection = () => {
             {/* Cards Section */}
             <div className="relative z-20 py-14 flex items-center">
                 <div className="w-full">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="flex items-center gap-8 justify-center">
                         {insightsData.map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                className="relative group cursor-pointer"
+                                className="relative group cursor-pointer "
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
@@ -162,13 +162,13 @@ const InsightsNewsSection = () => {
                                 onHoverEnd={() => setHoveredItem(null)}
                             >
                                 <div
-                                    className="relative w-full max-w-[400px] h-[500px] pb-8 gap-2 flex flex-col justify-end items-center rounded-[24px] overflow-hidden"
+                                    className="relative w-full 2xl:min-w-[405px] h-[500px] pb-8 gap-2 flex flex-col justify-end items-center rounded-[24px] overflow-hidden"
                                     style={{
                                         background: `url(${item.image}) `,
                                     }}
                                 >
                                     <motion.div
-                                        className="relative w-[295px] p-6 rounded-[12px]"
+                                        className="relative mx-8 px-6 py-8 rounded-[12px] max-w-[342px]"
                                         style={{
                                             border: "1px solid rgba(255, 255, 255, 0.10)",
                                             background: "rgba(255, 255, 255, 0.04)",
@@ -217,16 +217,14 @@ const InsightsNewsSection = () => {
                                     </motion.div>
 
                                     <motion.div
-                                        className="relative h-fit w-[295px] p-4 rounded-[12px] text-white flex items-center justify-between cursor-pointer group overflow-hidden"
+                                        className="relative w-full mx-8 max-w-[342px] px-6 py-4  rounded-[12px] text-white flex items-center justify-between cursor-pointer group overflow-hidden"
                                         style={{
                                             border: "1px solid rgba(255, 255, 255, 0.10)",
                                             background: "rgba(255, 255, 255, 0.04)",
                                             backdropFilter: "blur(10px)"
                                         }}
                                         whileHover={{
-                                            background: "rgba(37, 184, 228, 0.1)",
-                                            borderColor: "rgba(37, 184, 228, 0.3)",
-                                            scale: 1.02
+                                            scale: 1.01
                                         }}
                                         transition={{ duration: 0.3, ease: "easeOut" }}
                                     >
@@ -249,7 +247,7 @@ const InsightsNewsSection = () => {
                                         />
                                         <div className='flex items-center gap-2'>
                                             <motion.span
-                                                className="relative z-10 text-white font-medium group-hover:text-[#25B8E4] transition-colors duration-300"
+                                                className="relative z-10 text-white font-medium transition-colors duration-300"
                                             >
                                                 Read Report
                                             </motion.span>
@@ -258,7 +256,7 @@ const InsightsNewsSection = () => {
                                                 whileHover={{ x: 4 }}
                                                 transition={{ duration: 0.3, ease: "easeOut" }}
                                             >
-                                                <ChevronRight className="w-4 h-4 group-hover:text-[#25B8E4] transition-colors duration-300" />
+                                                <ChevronRight className="w-4 h-4  transition-colors duration-300" />
                                             </motion.div>
                                         </div>
                                     </motion.div>
