@@ -199,7 +199,7 @@ export default function WhatWeDoSection() {
                                         onHoverStart={() => setHoveredItem(service.id)}
                                         onHoverEnd={() => setHoveredItem(null)}
                                     >
-                                        <div className="relative h-[625px] min-w-[454px] rounded-[16px] overflow-hidden">
+                                        <div className="relative h-[625px] xl:min-w-[454px] rounded-[16px] overflow-hidden">
                                             {/* Service Image */}
                                             <motion.div
                                                 className="absolute inset-0"
@@ -213,6 +213,13 @@ export default function WhatWeDoSection() {
                                                     alt={service.title}
                                                     fill
                                                     className="object-cover"
+                                                />
+                                                {/* Gradient overlay on top of the image */}
+                                                <div
+                                                    className="absolute inset-0"
+                                                    style={{
+                                                        background: "linear-gradient(180deg, rgba(0, 0, 0, 0.80) 5.1%, rgba(0, 0, 0, 0.00) 40%)"
+                                                    }}
                                                 />
                                             </motion.div>
                                             {/* Solution Background Image Overlay - Only on hover */}

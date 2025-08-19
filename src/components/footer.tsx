@@ -13,7 +13,7 @@ const Footer = () => {
         >
             <div className="px-[5%] pb-6">
                 <div className="w-full">
-                    <div className="flex items-start justify-between gap-16 ">
+                    <div className="grid grid-cols-1 xl:grid-cols-5 gap-16 ">
                         <div className="flex flex-col justify-between gap-22">
                             <div className="">
                                 <Image src="/assets/logo.svg" alt="logo" width={150} height={100} className='w-[140px] h-fit object-contain' />

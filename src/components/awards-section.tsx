@@ -91,20 +91,23 @@ const AwardsSection = () => {
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                             transition={{ duration: 0.8, delay: 0.8 }}
                         >
-                            <div className="relative w-full max-w-[500px]">
+                            <div className="relative w-full max-w-[600px] h-[200px] mt-6">
                                 <div
-                                    className="w-full "
+                                    className="w-full h-full"
                                     style={{
-                                        background: "linear-gradient(90deg, black 0%, #050f23 10%, #14327e 30%, #1e468b 50% , #2f6d96 70%, #134A83 100%)",
-                                        maskImage: `url(/assets/awards/awards_left.svg)`,
-                                        WebkitMaskImage: `url(/assets/awards/awards_left.svg)`,
-                                        maskRepeat: 'no-repeat',
+                                        position: 'absolute',
+                                        top: 0,
+                                        right: '250px',
+                                        background: "linear-gradient(90deg, #134A83 0%, #80CDD5 100%)",
+                                        WebkitMask: "url(/assets/awards/awards_left.svg) no-repeat left center/contain",
+                                        mask: "url(/assets/awards/awards_left.svg) no-repeat left center/contain",
+                                        height: '130px',
+                                        width: '100%',
+                                        mixBlendMode: 'multiply',
                                         WebkitMaskRepeat: 'no-repeat',
-                                        maskSize: 'contain',
-                                        WebkitMaskSize: 'contain',
-                                        maskPosition: 'left center',
+                                        WebkitMaskSize: 'fill',
                                         WebkitMaskPosition: 'left center',
-                                        height: '130px'
+                                        WebkitMaskImage: "url(/assets/awards/awards-left-1.svg)"
                                     }}
                                 />
                             </div>

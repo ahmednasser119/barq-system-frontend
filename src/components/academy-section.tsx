@@ -22,7 +22,7 @@ const AcademySection = () => {
                     {/* Background Images Layering */}
                     {/* Ellipse background in the middle */}
                     <div
-                        className="absolute top-[-5%] right-0 bottom-0 left-[0%]  z-0 w-full h-full ">
+                        className="absolute top-[-0%] right-0 bottom-0 left-[0%]  z-0 w-full h-full ">
                         <div className="relative w-full h-full  ">
                             <Image
                                 src="/assets/accademy/academy-left-background.png"
@@ -116,7 +116,7 @@ const AcademySection = () => {
                 </div>
                 <AwardsSection />
             </section>
-            <InsightsNewsSection />
+            {/* <InsightsNewsSection /> */}
         </>
 
     )
