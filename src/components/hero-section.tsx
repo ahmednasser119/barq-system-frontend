@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import Image from 'next/image';
+import WhoAreWeSection from './who-are-we-section';
 
 export default function HeroSection() {
     const [isLoading, setIsLoading] = useState(true);
@@ -97,17 +98,13 @@ export default function HeroSection() {
                 )}
             </AnimatePresence>
 
-            <section className="relative min-h-screen w-full overflow-auto px-[5%]"
-                style={{
-                    background: "linear-gradient(180deg, rgba(0, 76, 164, 0.00) 23.25%, #000 82.5%), linear-gradient(0deg, rgba(0, 123, 255, 0.15) 0%, transparent 30%)"
-                }}
-            >
+            <section className="relative min-h-screen 2xl:h-[955px] w-full overflow-auto px-[5%]" >
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    className="absolute inset-0 h-full w-full object-cover rotate-180"
+                    className="absolute inset-0 h-screen w-full object-cover rotate-180"
                     onLoadedData={handleVideoLoad}
                     onCanPlayThrough={handleVideoLoad}
                     onError={handleVideoError}
@@ -116,6 +113,17 @@ export default function HeroSection() {
                     <source src="/assets/bg-video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+                {/* Gradient overlay with mix-blend-mode */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background: "linear-gradient(180deg, #004ca4 23.25%, #000 82.5% )",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        mixBlendMode: "overlay"
+                    }}
+                />
                 <div className="absolute inset-0 bg-black/10" />
                 <Navbar />
 
@@ -168,7 +176,7 @@ export default function HeroSection() {
                                     <Button
                                         className="text-white  flex items-center justify-center gap-[10px] text-[18px] h-[56px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
                                         style={{
-                                            background: "linear-gradient(95deg, var(--Secondary-Blue-100, #318CCC) 13.23%, #0040C3 81.63%)",
+                                            background: "linear-gradient(95deg, #318CCC 13.23%, #0040C3 81.63%)",
                                             boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)",
                                             padding: "16px 24px"
                                         }}
@@ -184,6 +192,7 @@ export default function HeroSection() {
                     )}
                 </AnimatePresence>
             </section>
+            <WhoAreWeSection />
         </>
     );
 }

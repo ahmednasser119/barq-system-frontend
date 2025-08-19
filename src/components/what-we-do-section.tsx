@@ -12,7 +12,7 @@ import {
     type CarouselApi,
 } from "@/components/ui/carousel";
 import SuccessStoriesSection from './success-stories-section';
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface ServiceItem {
     id: number;
@@ -267,7 +267,7 @@ export default function WhatWeDoSection() {
 
                                             {/* Hover Border Effect */}
                                             <motion.div
-                                                className="absolute inset-0 rounded-[24px] border-2 border-[#5DADE2]"
+                                                className="absolute inset-0 rounded-[24px] border-2 "
                                                 initial={{ opacity: 0 }}
                                                 animate={{
                                                     opacity: hoveredItem === service.id ? 1 : 0
@@ -288,19 +288,15 @@ export default function WhatWeDoSection() {
                     <div className="flex justify-center gap-4 mt-12">
                         <button
                             onClick={() => api?.scrollPrev()}
-                            className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-transparent text-white hover:border-[#5DADE2] hover:text-[#5DADE2] hover:bg-transparent transition-all duration-300"
+                            className="w-12 h-12 flex items-center justify-center rounded-full border hover:border-white/20 bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M12 15L7 10L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <ArrowLeft size={18} />
                         </button>
                         <button
                             onClick={() => api?.scrollNext()}
-                            className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 bg-transparent text-white hover:border-[#5DADE2] hover:text-[#5DADE2] hover:bg-transparent transition-all duration-300"
+                            className="w-12 h-12 flex items-center justify-center rounded-full border hover:border-white/20 bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M8 5L13 10L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <ArrowRight size={18} />
                         </button>
                     </div>
                 </motion.div>
