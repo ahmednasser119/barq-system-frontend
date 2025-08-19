@@ -40,24 +40,10 @@ const InsightsNewsSection = () => {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black  pb-20 overflow-hidden px-[5%]"
+            className="relative bg-black  pb-20 overflow-hidden w-full  z-10"
         >
-
-
             {/* Main insights background */}
-            <div className="absolute inset-0 flex items-center justify-center w-full h-full z-10">
-                <div className="relative w-full h-full">
-                    <Image
-                        src="/assets/insights/insights_background.png"
-                        alt="Insights background"
-                        width={820}
-                        height={910}
-                        className="object-cover absolute top-[-20%] right-[-20%] w-full h-full "
-                    />
-                    {/* Top-right gradient overlay */}
-                    <div className="absolute top-[-20%] right-0 w-full h-full bg-gradient-to-bl from-black via-transparent to-transparent"></div>
-                </div>
-            </div>
+
 
             {/* Left background with gradient overlay */}
             <motion.div
@@ -67,15 +53,17 @@ const InsightsNewsSection = () => {
                 transition={{ duration: 0.8, delay: 1.4 }}
             >
                 <div className="relative w-full h-full">
-                    <Image
-                        src="/assets/insights/insights_left_background.svg"
-                        alt="Left background"
-                        width={514}
-                        height={514}
-                        className="object-contain absolute left-[-10%] top-[0%]  w-[514px] h-[514px]"
+                    {/* Background gradient layer */}
+                    <div
+                        className="absolute left-[-10%] top-[0%]  w-[514px] h-[514px]"
+                        style={{
+                            background: "linear-gradient(90deg, #A2E9FF 0%, #0082A9 20% , #031b57 60%)",
+                            WebkitMask: "url(assets/insights/insights_left_background.svg) no-repeat center/contain",
+                            mask: "url(assets/insights/insights_left_background.svg) no-repeat center/contain"
+                        }}
                     />
                     {/* Black gradient overlay on the left */}
-                    <div className="absolute top-[100px] left-[-5%] w-[500px] h-[500px]  right-0 bottom-0 rounded-full "
+                    <div className="absolute top-[50px] left-[-5%] w-[600px] h-[600px]  right-0 bottom-0 rounded-full "
                         style={{
                             background: 'linear-gradient(180deg, transparent 0%, #00000033 20%, #000000b3 40%, black 60%, black 100%)',
                         }}
@@ -91,16 +79,15 @@ const InsightsNewsSection = () => {
                 transition={{ duration: 0.8, delay: 1.6 }}
             >
                 <div className="relative w-full h-full bg-gradient-to-b from-black/100 to-black/0">
-                    <Image
-                        src="/assets/insights/insights_right_background.png"
-                        alt="Right background"
-                        width={514}
-                        height={514}
-                        className="object-contain absolute  top-[47%] right-[-15%]   w-[514px] h-[514px] "
-
+                    <div
+                        className="absolute  top-[47%] right-[-15%]   w-[514px] h-[514px]"
+                        style={{
+                            background: "linear-gradient(336deg, #B6E6F7 5.85%, #134A83 55.25%)",
+                            WebkitMask: "url(/assets/insights/insights_right_background.png) no-repeat center/contain",
+                            mask: "url(/assets/insights/insights_right_background.png) no-repeat center/contain"
+                        }}
                     />
                     <div className="absolute top-0 right-0 left-0 bottom-0  2xl:h-0 h-[700px]  bg-gradient-to-br  from-black  to-black"></div>
-
                 </div>
             </motion.div>
 

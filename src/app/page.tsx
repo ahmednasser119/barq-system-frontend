@@ -11,7 +11,6 @@ export default function Home() {
       <HeroSection />
       <WhatWeDoSection />
       <AcademySection />
-      <InsightsNewsSection />
       <LeadershipSection />
       <Footer />
     </div>

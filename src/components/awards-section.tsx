@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import InsightsNewsSection from './insights-news-section';
 
 const AwardsSection = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -32,8 +33,21 @@ const AwardsSection = () => {
     ];
 
     return (
-        <section ref={containerRef} className=" py-20 ">
-            <div className="w-full ">
+        <section ref={containerRef} className=" z-20 ">
+            <div className="w-full px-[5%] py-20 ">
+                <div className="absolute inset-0 flex items-center justify-center w-full h-full z-20 overflow-hidden">
+                    <div className="relative w-full h-full">
+                        <Image
+                            src="/assets/insights/insights_background.png"
+                            alt="Insights background"
+                            width={820}
+                            height={918}
+                            className="object-cover  absolute top-[40%] right-[-40%] w-full blur-[200px] "
+                        />
+                        {/* Top-right gradient overlay */}
+                        <div className="absolute top-[-20%] right-0 w-full h-full bg-gradient-to-bl from-black via-transparent to-transparent"></div>
+                    </div>
+                </div>
                 {/* Main Layout */}
                 <div className="grid lg:grid-cols-2 gap-8 items-start w-full relative min-h-[100vh] ">
                     {/* Left Side - Charts */}
@@ -79,9 +93,9 @@ const AwardsSection = () => {
                         >
                             <div className="relative w-full max-w-[500px]">
                                 <div
-                                    className="w-full h-[126px]"
+                                    className="w-full "
                                     style={{
-                                        background: 'linear-gradient(90deg, black 0%, #072c67 50%, #11648c 100%)',
+                                        background: "linear-gradient(90deg, black 0%, #050f23 10%, #14327e 30%, #1e468b 50% , #2f6d96 70%, #134A83 100%)",
                                         maskImage: `url(/assets/awards/awards_left.svg)`,
                                         WebkitMaskImage: `url(/assets/awards/awards_left.svg)`,
                                         maskRepeat: 'no-repeat',
@@ -89,7 +103,8 @@ const AwardsSection = () => {
                                         maskSize: 'contain',
                                         WebkitMaskSize: 'contain',
                                         maskPosition: 'left center',
-                                        WebkitMaskPosition: 'left center'
+                                        WebkitMaskPosition: 'left center',
+                                        height: '130px'
                                     }}
                                 />
                             </div>
@@ -158,13 +173,14 @@ const AwardsSection = () => {
                 />
 
                 {/* Right side gradient */}
-                <div
+                {/* <div
                     className="absolute right-0 top-0 bottom-0 w-1/2 "
                     style={{
                         background: 'radial-gradient(ellipse at center right, rgba(49, 140, 204, 0.1) 0%, transparent 70%)'
                     }}
-                />
+                /> */}
             </div>
+            <InsightsNewsSection />
         </section>
     );
 };

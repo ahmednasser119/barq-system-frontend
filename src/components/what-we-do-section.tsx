@@ -65,7 +65,7 @@ export default function WhatWeDoSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute top-[-40%] right-0 bottom-0 left-0 flex items-center justify-center z-10">
+                className="absolute top-[-40%] right-0 bottom-0 left-0 flex items-center justify-center z-10 ">
                 <div className="relative w-full h-full  ">
                     <Image
                         src="/assets/what_we_do_section/Ellipse_what_we_do.png"
@@ -76,21 +76,21 @@ export default function WhatWeDoSection() {
                 </div>
             </motion.div>
 
-            {/* Left background starting from middle to right edge */}
-            <motion.div
+            {/* right background starting from middle to right edge */}
+            {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.3 }}
-                className="absolute top-0 right-0  bottom-[-50%] left-[20%] z-5">
+                className="absolute top-0 right-0  bottom-[0%] left-[20%] z-5">
                 <div className="relative w-full h-full">
                     <Image
                         src="/assets/what_we_do_section/what_we_do_left_background.png"
                         alt="Left background"
                         fill
-                        className="object-cover object-left"
+                        className="object-cover object-left blur-[50px]"
                     />
                 </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Top background overlay */}
             <motion.div
@@ -108,18 +108,18 @@ export default function WhatWeDoSection() {
                 </div>
             </motion.div>
 
-            {/* right background */}
+            {/* left background */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.3 }}
-                className="absolute top-0 right-[30%] rotate-180  bottom-[-20%] left-0 z-5">
+                className="absolute top-0 right-[35%] rotate-180  bottom-[-10%] left-0 z-5">
                 <div className="relative w-full h-full">
                     <Image
                         src="/assets/what_we_do_section/what_we_do_left_background.png"
                         alt="Left background"
                         fill
-                        className="object-cover object-left"
+                        className="object-cover object-left blur-[50px]"
                     />
                 </div>
             </motion.div>

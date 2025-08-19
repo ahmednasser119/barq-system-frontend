@@ -19,15 +19,30 @@ export default function LeadershipSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
             >
-                <Image
-                    src="/assets/Isolation_Mode.svg"
-                    alt="Decorative element"
-                    width={152}
-                    height={479}
-                    className="w-[152px] h-[479px] object-contain"
-                />
+                <div className="relative w-[152px] h-[479px]">
+                    {/* Background gradient layer */}
+                    <div
+                        className="absolute inset-0 w-[152px] h-[479px]"
+                        style={{
+                            background: "linear-gradient(90deg, #A2E9FF 0%, #0082A9 60% , #031b57 100%)",
+                            WebkitMask: "url(/assets/Isolation_Mode_blend.svg) no-repeat center/contain",
+                            mask: "url(/assets/Isolation_Mode_blend.svg) no-repeat center/contain"
+                        }}
+                    />
+                    {/* SVG with mix-blend-mode */}
+                    <Image
+                        src="/assets/Isolation_Mode_blend.svg"
+                        alt="Decorative element"
+                        width={152}
+                        height={479}
+                        className="relative w-[152px] h-[479px] object-contain"
+                        style={{
+                            mixBlendMode: "multiply"
+                        }}
+                    />
+                </div>
             </motion.div>
-            <div className="absolute inset-0 flex items-center justify-center w-full h-full z-10">
+            <div className="absolute inset-0 flex items-center justify-center w-full  z-0 top-[20%] blur-[200px]">
                 <div className="relative w-full h-full ">
                     <Image
                         src="/assets/leadership_background.png"
