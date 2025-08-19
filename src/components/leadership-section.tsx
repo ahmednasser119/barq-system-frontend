@@ -17,7 +17,7 @@ export default function LeadershipSection() {
                 className="absolute top-0 left-0 z-10"
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
             >
                 <Image
                     src="/assets/Isolation_Mode.svg"
@@ -42,7 +42,7 @@ export default function LeadershipSection() {
                     className="flex justify-center pt-20"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.6, delay: 1 }}
                 >
                     <span className=" text-[24px] font-bold  tracking-wider"
                         style={{
@@ -59,7 +59,7 @@ export default function LeadershipSection() {
                     className="text-white text-[48px] font-bold leading-tight text-center mt-6 z-20"
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    transition={{ duration: 0.8, delay: 1.2 }}
                 >
                     From Our Leadership
                 </motion.h2>
@@ -71,10 +71,10 @@ export default function LeadershipSection() {
                             className="relative w-1/2"
                             initial={{ opacity: 0, x: -50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
+                            transition={{ duration: 0.8, delay: 1 }}
                         >
                             <div
-                                className="relative w-full max-w-[618px] rounded-[24px] overflow-hidden"
+                                className="relative w-full  rounded-[24px] overflow-hidden"
                                 style={{
                                     background: `url(/assets/leadership_image_background.jpg) lightgray 50% / cover no-repeat, url(/assets/leadership_image_background.jpg) lightgray 50% / cover no-repeat`,
                                     backgroundBlendMode: 'soft-light, normal'
@@ -87,7 +87,7 @@ export default function LeadershipSection() {
                                         alt="Leadership"
                                         width={434}
                                         height={620}
-                                        className="w-fit h-[430px] rounded-[16px] object-cover"
+                                        className="w-full h-fit rounded-[16px] object-cover"
                                     />
                                 </div>
                             </div>
@@ -96,13 +96,13 @@ export default function LeadershipSection() {
                             className="w-1/2"
                             initial={{ opacity: 0, x: 50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
+                            transition={{ duration: 0.8, delay: 1 }}
                         >
                             <motion.div
                                 className=" pt-8"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-                                transition={{ duration: 0.8, delay: 1.2 }}
+                                transition={{ duration: 0.8, delay: 1.8 }}
                             >
                                 <Image src="/assets/quote.svg" alt="quote" width={24} height={24} className='h-[24px] w-[24px] ' />
                                 <blockquote className="text-[#FFF] text-[32px] font-light leading-[48px]  ">
@@ -114,7 +114,7 @@ export default function LeadershipSection() {
                                 className="pt-16"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                transition={{ duration: 0.8, delay: 1.4 }}
+                                transition={{ duration: 0.8, delay: 2 }}
                             >
                                 <div className="text-white text-[18px] mb-[16px]  font-bold">
                                     Mahmoud Soliman,
