@@ -125,7 +125,7 @@ export default function HeroSection() {
                     }}
                 />
                 <div className="absolute inset-0 bg-black/10" />
-                <Navbar />
+                <Navbar isHomePage={true} />
 
                 {/* Hero Content - Only show after video loads */}
                 <AnimatePresence>
