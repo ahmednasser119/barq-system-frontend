@@ -11,7 +11,7 @@ export default function EnvironmentalSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black w-full px-[5%] pt-44 min-h-screen z-5 "
+            className="relative bg-black w-full px-[5%] pt-44 min-h-screen z-5 pb-20 "
         >
             {/* Blue Curved Decorative Elements - Bottom Right */}
             {/* <motion.div
@@ -68,7 +68,12 @@ export default function EnvironmentalSection() {
                 transition={{ duration: 0.8, delay: 1.6 }}
             >
                 <div className="relative w-full h-full bg-gradient-to-b from-black/100 to-black/0">
-                    <div
+                    <div className='absolute top-[50%] right-0 left-[60%] bottom-0 w-[514px] h-[514px]'
+                    >
+                        <Image className='rotate-320' src="/assets/sustainability/sus.svg" alt="Environmental" width={514} height={514} />
+                        <div className="absolute top-0 right-0 left-0 bottom-0  2xl:h-0 h-[200px]  bg-gradient-to-br  from-black  to-black"></div>
+                    </div>
+                    {/* <div
                         className="absolute  top-[47%] right-[-15%]   w-[514px] h-[514px]"
                         style={{
                             background: "linear-gradient(336deg, #86caeb 0.85%, #134A83 40.25%)",
@@ -76,7 +81,7 @@ export default function EnvironmentalSection() {
                             mask: "url(/assets/insights/insights_right_background.png) no-repeat center/contain"
                         }}
                     />
-                    <div className="absolute top-0 right-0 left-0 bottom-0  2xl:h-0 h-[700px]  bg-gradient-to-br  from-black  to-black"></div>
+                    <div className="absolute top-0 right-0 left-0 bottom-0  2xl:h-0 h-[700px]  bg-gradient-to-br  from-black  to-black"></div> */}
                 </div>
             </motion.div>
 
