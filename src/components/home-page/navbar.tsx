@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 
-export default function Navbar({ isHomePage }: { isHomePage: boolean }) {
+export default function Navbar({ isHomePage }: { isHomePage?: boolean }) {
     const [isWhoWeAreOpen, setIsWhoWeAreOpen] = useState(false);
     const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState(false);
     const whoWeAreRef = useRef<HTMLDivElement>(null);
