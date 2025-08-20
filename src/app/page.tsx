@@ -1,8 +1,8 @@
-import AcademySection from "@/components/academy-section";
+import AcademySection from "@/components/home-page/academy-section";
 import Footer from "@/components/footer";
-import HeroSection from "@/components/hero-section";
-import LeadershipSection from "@/components/leadership-section";
-import WhatWeDoSection from "@/components/what-we-do-section";
+import HeroSection from "@/components/home-page/hero-section";
+import LeadershipSection from "@/components/home-page/leadership-section";
+import WhatWeDoSection from "@/components/home-page/what-we-do-section";
 
 export default function Home() {
   return (
