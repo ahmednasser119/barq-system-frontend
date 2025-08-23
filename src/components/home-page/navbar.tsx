@@ -36,7 +36,7 @@ export default function Navbar({ isHomePage }: { isHomePage?: boolean }) {
 
     const whoWeAreItems = [
         { label: 'About BARQ', href: '#about' },
-        { label: 'Leadership', href: '#leadership' },
+        { label: 'Leadership', href: '/leadership' },
         { label: 'Awards & Accolades', href: '#awards' },
         { label: 'Sustainability', href: '/sustainability' },
         { label: 'Alliances', href: '#alliances' }
