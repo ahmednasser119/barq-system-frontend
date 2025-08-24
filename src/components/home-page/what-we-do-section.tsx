@@ -281,7 +281,7 @@ export default function WhatWeDoSection() {
 
                                             {/* Hover Border Effect */}
                                             <motion.div
-                                                className="absolute inset-0 rounded-[24px] border-2 "
+                                                className="absolute inset-0 rounded-[24px] "
                                                 initial={{ opacity: 0 }}
                                                 animate={{
                                                     opacity: hoveredItem === service.id ? 1 : 0
