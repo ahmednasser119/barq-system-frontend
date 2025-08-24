@@ -13,7 +13,7 @@ export default function SustainabilityHeroSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black px-[5%]  overflow-hidden h-[1303px]"
+            className="relative bg-black px-[5%] lg:px-[5%] md:px-[4%] sm:px-[3%] overflow-hidden h-[1303px] lg:h-[1303px] md:h-auto sm:h-auto"
         >
             {/* Navbar */}
             <div className="relative z-30">

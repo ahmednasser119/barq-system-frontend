@@ -15,7 +15,7 @@ const AcademySection = () => {
                 ref={containerRef}
                 className="relative bg-black pt-0 z-10 "
             >
-                <div className="w-full px-[5%] ">
+                <div className="w-full px-[5%] lg:px-[5%] md:px-[4%] sm:px-[3%]">
                     {/* Background Images Layering */}
                     {/* Ellipse background in the middle */}
                     <div

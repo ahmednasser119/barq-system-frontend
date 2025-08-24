@@ -50,7 +50,7 @@ export default function Navbar({ isHomePage }: { isHomePage?: boolean }) {
 
     return (
         <motion.header
-            className={`relative z-[100] flex items-center justify-between py-[30px] ${isHomePage ? 'mb-[100px]' : ''}`}
+            className={`relative z-[100] flex items-center justify-between py-[30px] lg:py-[30px] md:py-[20px] sm:py-[15px] ${isHomePage ? 'mb-[100px] lg:mb-[100px] md:mb-[80px] sm:mb-[60px]' : ''}`}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: isHomePage ? 4.2 : 0.2, ease: "easeOut" }}

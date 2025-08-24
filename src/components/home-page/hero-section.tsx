@@ -98,7 +98,7 @@ export default function HeroSection() {
                 )}
             </AnimatePresence>
 
-            <section className="relative min-h-screen 2xl:h-[955px] w-full overflow-auto px-[5%]" >
+            <section className="relative min-h-screen 2xl:h-[955px] w-full overflow-auto px-[5%] lg:px-[5%] md:px-[4%] sm:px-[3%]" >
                 <video
                     autoPlay
                     muted
@@ -140,14 +140,14 @@ export default function HeroSection() {
                 <AnimatePresence>
                     {showContent && (
                         <motion.div
-                            className="relative z-[1] flex items-center"
+                            className="relative z-[1] flex items-center justify-center lg:justify-start"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, ease: "easeOut" }}
                         >
-                            <div className="max-w-[608px]">
-                                <                                motion.div
-                                    className="flex items-center mb-6 space-x-2 rounded-[50px] w-fit py-1 px-3 border-[#ffffff1a] border-[1px] bg-[#FFFFFF0A] backdrop-blur-[1px]"
+                            <div className="max-w-[608px] lg:max-w-[608px] md:max-w-[500px] sm:max-w-full text-center lg:text-left">
+                                <motion.div
+                                    className="flex items-center mb-6 space-x-2 rounded-[50px] w-fit py-1 px-3 border-[#ffffff1a] border-[1px] bg-[#FFFFFF0A] backdrop-blur-[1px] mx-auto lg:mx-0"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -158,7 +158,7 @@ export default function HeroSection() {
                                     <span className="text-white/80 text-sm hero-text">Pioneer in Enterprise Security</span>
                                 </motion.div>
                                 <                                motion.h1
-                                    className="text-white text-[56px] hero-heading leading-tight mb-4"
+                                    className="text-white text-[56px] xl:text-[56px] lg:text-[48px] md:text-[40px] sm:text-[32px] hero-heading leading-tight mb-4"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
@@ -168,7 +168,7 @@ export default function HeroSection() {
                                     Digital Future
                                 </motion.h1>
                                 <                                motion.p
-                                    className="text-white text-[18px] mb-10 leading-relaxed hero-text pr-4"
+                                    className="text-white text-[18px] lg:text-[18px] md:text-[16px] sm:text-[14px] mb-10 leading-relaxed hero-text pr-4 lg:pr-4 md:pr-2 sm:pr-0"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
@@ -177,13 +177,13 @@ export default function HeroSection() {
                                     services — from infrastructure and automation to seamless connectivity
                                     and cybersecurity excellence.
                                 </motion.p>
-                                <                                motion.div
+                                <motion.div
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
                                 >
                                     <Button
-                                        className="text-white  flex items-center justify-center gap-[10px] text-[18px] h-[56px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
+                                        className="text-white flex items-center justify-center gap-[10px] text-[18px] lg:text-[18px] md:text-[16px] sm:text-[14px] h-[56px] lg:h-[56px] md:h-[48px] sm:h-[44px] font-normal transition-all duration-300 hover:scale-105 hero-text rounded-[12px]"
                                         style={{
                                             background: "linear-gradient(95deg, #318CCC 13.23%, #0040C3 81.63%)",
                                             boxShadow: "4px 8px 24px 0 rgba(36, 107, 253, 0.25)",

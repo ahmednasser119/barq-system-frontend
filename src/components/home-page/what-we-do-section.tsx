@@ -57,7 +57,7 @@ export default function WhatWeDoSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-black  pl-[5%] py-20 overflow-hidden min-h-[220vh] h-fit"
+            className="relative bg-black pl-[5%] lg:pl-[5%] md:pl-[4%] sm:pl-[3%] py-20 lg:py-20 md:py-16 sm:py-12 overflow-hidden min-h-[220vh] lg:min-h-[220vh] md:min-h-[180vh] sm:min-h-[120vh] h-fit"
         >
             {/* Background Images Layering */}
             {/* Ellipse background in the middle */}
@@ -135,7 +135,7 @@ export default function WhatWeDoSection() {
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
                         <span
-                            className="text-[24px] font-bold tracking-wider"
+                            className="text-[24px] lg:text-[24px] md:text-[20px] sm:text-[18px] font-bold tracking-wider"
                             style={{
                                 background: 'linear-gradient(54deg, #60C1CA 15.02%, #25B8E4 82.83%)',
                                 WebkitBackgroundClip: 'text',
@@ -148,7 +148,7 @@ export default function WhatWeDoSection() {
                     </motion.div>
 
                     <motion.h2
-                        className="text-white text-[48px] font-bold leading-tight"
+                        className="text-white text-[48px] lg:text-[48px] md:text-[40px] sm:text-[32px] font-bold leading-tight"
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.8, delay: 1.0 }}
@@ -304,13 +304,15 @@ export default function WhatWeDoSection() {
                             onClick={() => api?.scrollPrev()}
                             className="w-[58px] h-14   flex items-center justify-center rounded-full border-[3px] bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
-                            <Image src="/assets/icon-left.svg" alt="arrow-right" width={14} height={18} className='  w-[14px] h-[18px] hover:fill-white' />
+                            <Image src="/assets/arrow-left.png" alt="arrow-left" width={14} height={18} className='hover:fill-white' />
+
+                            {/* <Image src="/assets/icon-left.svg" alt="arrow-right" width={14} height={18} className='  w-[14px] h-[18px] hover:fill-white' /> */}
                         </button>
                         <button
                             onClick={() => api?.scrollNext()}
                             className="w-[58px] h-14   flex items-center justify-center rounded-full border-[3px] bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
-                            <Image src="/assets/icon.svg" alt="arrow-right" width={14} height={18} className='hover:fill-white' />
+                            <Image src="/assets/arrow-right.png" alt="arrow-right" width={14} height={18} className='hover:fill-white' />
                         </button>
                     </div>
                 </motion.div>

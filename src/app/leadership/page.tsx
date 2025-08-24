@@ -72,7 +72,7 @@ export default function LeadershipPage() {
             {/* Hero Section */}
             <section
                 ref={containerRef}
-                className="relative bg-black px-[8%] overflow-hidden h-[2003px]"
+                className="relative bg-black px-[8%] lg:px-[8%] md:px-[6%] sm:px-[4%] overflow-hidden h-[2003px] lg:h-[2003px] md:h-auto sm:h-auto"
             >
                 {/* Navbar */}
                 <div className="relative z-30">
@@ -126,7 +126,7 @@ export default function LeadershipPage() {
                             transition={{ duration: 0.6 }}
                             className=""
                         >
-                            <h2 className="text-white text-[48px] font-bold  mb-6 max-w-[450px] leading-[57.6px]">
+                            <h2 className="text-white text-[48px] lg:text-[48px] md:text-[40px] sm:text-[32px] font-bold mb-6 max-w-[450px] lg:max-w-[450px] md:max-w-[400px] sm:max-w-full leading-[57.6px]">
                                 Meet Our Leadership Team
                             </h2>
                         </motion.div>
@@ -134,12 +134,12 @@ export default function LeadershipPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={isLeadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.6 }}
-                            className="text-[#ECEEEE] text-[16px] font-normal max-w-[520px] mb-8"
+                            className="text-[#ECEEEE] text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] font-normal max-w-[520px] lg:max-w-[520px] md:max-w-[450px] sm:max-w-full mb-8"
                         >
                             Our leadership team brings together diverse experience and a shared commitment to delivering world-class solutions, building strong partnerships, and empowering our people
                         </motion.p>
 
-                        <div className="flex justify-center gap-6 mb-20">
+                        <div className="flex justify-center gap-6 lg:gap-6 md:gap-4 sm:gap-2 mb-20 flex-wrap lg:flex-nowrap md:flex-wrap sm:flex-wrap">
                             {leadershipTeam.map((member, index) => (
                                 <motion.div
                                     key={member.id}
@@ -150,7 +150,7 @@ export default function LeadershipPage() {
                                     onClick={() => openModal(member)}
                                 >
                                     <div
-                                        className="w-[410px] h-[492px] py-8 px-4 flex flex-col relative overflow-hidden transition-transform duration-300"
+                                        className="w-[410px] lg:w-[410px] md:w-[350px] sm:w-[300px] h-[492px] lg:h-[492px] md:h-[420px] sm:h-[380px] py-8 px-4 flex flex-col relative overflow-hidden transition-transform duration-300"
                                         style={memberCardStyles}
                                     >
                                         {/* Image Container - Takes up most of the space */}
@@ -221,7 +221,7 @@ export default function LeadershipPage() {
                             transition={{ duration: 0.6 }}
                             className=" "
                         >
-                            <h2 className="text-white text-[48px] font-bold  mb-6 max-w-[420px] leading-[57.6px]">
+                            <h2 className="text-white text-[48px] lg:text-[48px] md:text-[40px] sm:text-[32px] font-bold mb-6 max-w-[420px] lg:max-w-[420px] md:max-w-[380px] sm:max-w-full leading-[57.6px]">
                                 Meet Our Executive Team
                             </h2>
                             <motion.p
@@ -234,7 +234,7 @@ export default function LeadershipPage() {
                             </motion.p>
                         </motion.div>
 
-                        <div className="flex  justify-center gap-6 w-full">
+                        <div className="flex justify-center gap-6 lg:gap-6 md:gap-4 sm:gap-2 w-full flex-wrap">
                             {executiveTeam.map((member, index) => (
                                 <motion.div
                                     key={member.id}
@@ -245,7 +245,7 @@ export default function LeadershipPage() {
                                     onClick={() => openModal(member)}
                                 >
                                     <div
-                                        className="w-[194px] h-[492px] py-8  relative flex flex-col transition-transform duration-300"
+                                        className="w-[194px] lg:w-[194px] md:w-[180px] sm:w-[160px] h-[492px] lg:h-[492px] md:h-[420px] sm:h-[380px] py-8 relative flex flex-col transition-transform duration-300"
                                         style={{
                                             borderRadius: "12px",
                                             border: "1px solid rgba(255, 255, 255, 0.10)",

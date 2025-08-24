@@ -11,7 +11,7 @@ export default function LeadershipSection() {
     return (
         <section
             ref={containerRef}
-            className="relative  bg-black px-[5%]"
+            className="relative bg-black px-[5%] lg:px-[5%] md:px-[4%] sm:px-[3%]"
         >
             <motion.div
                 className="absolute top-0 left-0 z-10"
@@ -19,7 +19,7 @@ export default function LeadershipSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.8, delay: 1 }}
             >
-                <div className="relative w-[152px] h-[479px]">
+                <div className="relative w-[152px] h-[479px] lg:w-[152px] lg:h-[479px] md:w-[120px] md:h-[380px] sm:w-[100px] sm:h-[320px]">
                     {/* Background gradient layer */}
                     <div
                         className="absolute inset-0 w-[152px] h-[479px]"
