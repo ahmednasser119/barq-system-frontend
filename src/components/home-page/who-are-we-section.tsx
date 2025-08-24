@@ -76,7 +76,7 @@ export default function WhoAreWeSection() {
             </motion.div>
 
             <div className="">
-                <div className="flex flex-col lg:flex-row gap-16 items-start">
+                <div className="flex flex-col lg:flex-row gap-[39px] items-start">
                     <div className="flex-shrink-0 lg:w-auto w-full">
                         <div className="flex items-start gap-6">
                             <motion.div
@@ -92,7 +92,7 @@ export default function WhoAreWeSection() {
                     </div>
                     <div className="flex-1">
                         <motion.h2
-                            className=" mb-8"
+                            className=" mb-[21px]"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ duration: 0.8, delay: 0.3 }}

@@ -159,55 +159,60 @@ const InsightsNewsSection = () => {
                                         backgroundPositionY: 'center',
                                     }}
                                 >
-                                    <motion.div
-                                        className="relative mx-8 px-6 py-8 rounded-[12px] max-w-[406px] "
-                                        style={{
-                                            border: "1px solid rgba(255, 255, 255, 0.10)",
-                                            background: "rgba(255, 255, 255, 0.04)",
-                                            backdropFilter: "blur(10px)"
-                                        }}
-                                        animate={{
-                                            height: hoveredItem === item.id ? "auto" : "fit-content"
-                                        }}
-                                        transition={{ duration: 0.25, ease: "easeOut" }}
-                                    >
-                                        {/* Date */}
-                                        <p className="text-white text-[16px]  mb-4">
-                                            {item.date}
-                                        </p>
 
-                                        {/* Title */}
-                                        <motion.h3
-                                            className="text-white text-[24px] font-bold leading-tight"
-                                            animate={{
-                                                scale: hoveredItem === item.id ? 1.02 : 1
-                                            }}
-                                            transition={{ duration: 0.2, ease: "easeOut" }}
-                                        >
-                                            {item.title}
-                                        </motion.h3>
+                                    <div className='mx-8 flex flex-col gap-2'>
 
-                                        {/* Description that appears on hover */}
+
                                         <motion.div
-                                            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                                            className="relative  px-6 py-8 rounded-[12px] "
+                                            style={{
+                                                border: "1px solid rgba(255, 255, 255, 0.10)",
+                                                background: "rgba(255, 255, 255, 0.04)",
+                                                backdropFilter: "blur(10px)"
+                                            }}
                                             animate={{
-                                                opacity: hoveredItem === item.id ? 1 : 0,
-                                                height: hoveredItem === item.id ? "auto" : 0,
-                                                marginTop: hoveredItem === item.id ? 16 : 0
+                                                height: hoveredItem === item.id ? "auto" : "fit-content"
                                             }}
-                                            transition={{
-                                                duration: 0.25,
-                                                ease: "easeOut",
-                                                delay: hoveredItem === item.id ? 0.05 : 0
-                                            }}
-                                            className="overflow-hidden"
+                                            transition={{ duration: 0.25, ease: "easeOut" }}
                                         >
-                                            <p className="text-[#fff] text-[16px] leading-relaxed">
-                                                {item.description}
+                                            {/* Date */}
+                                            <p className="text-white text-[16px]  mb-4">
+                                                {item.date}
                                             </p>
+
+                                            {/* Title */}
+                                            <motion.h3
+                                                className="text-white text-[24px] font-bold leading-tight"
+                                                animate={{
+                                                    scale: hoveredItem === item.id ? 1.02 : 1
+                                                }}
+                                                transition={{ duration: 0.2, ease: "easeOut" }}
+                                            >
+                                                {item.title}
+                                            </motion.h3>
+
+                                            {/* Description that appears on hover */}
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                                                animate={{
+                                                    opacity: hoveredItem === item.id ? 1 : 0,
+                                                    height: hoveredItem === item.id ? "auto" : 0,
+                                                    marginTop: hoveredItem === item.id ? 16 : 0
+                                                }}
+                                                transition={{
+                                                    duration: 0.25,
+                                                    ease: "easeOut",
+                                                    delay: hoveredItem === item.id ? 0.05 : 0
+                                                }}
+                                                className="overflow-hidden"
+                                            >
+                                                <p className="text-[#fff] text-[16px] leading-relaxed">
+                                                    {item.description}
+                                                </p>
+                                            </motion.div>
                                         </motion.div>
-                                    </motion.div>
-                                    <div className=' mx-[20px] '>
+
+
                                         <motion.div
                                             className="relative px-6 py-4  rounded-[12px] text-white flex items-center justify-between cursor-pointer overflow-hidden"
                                             style={{
@@ -216,7 +221,7 @@ const InsightsNewsSection = () => {
                                                 backdropFilter: "blur(10px)"
                                             }}
                                             whileHover={{
-                                                scale: 1.01
+
                                             }}
                                             transition={{ duration: 0.3, ease: "easeOut" }}
                                         >
@@ -245,7 +250,9 @@ const InsightsNewsSection = () => {
                                                 </motion.span>
                                                 <motion.div
                                                     className="relative z-10"
-                                                    whileHover={{ x: 4 }}
+                                                    animate={{
+                                                        x: hoveredItem === item.id ? -4 : 0
+                                                    }}
                                                     transition={{ duration: 0.3, ease: "easeOut" }}
                                                 >
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

@@ -42,7 +42,7 @@ export default function LeadershipSection() {
                     />
                 </div>
             </motion.div>
-            <div className="absolute inset-0 flex items-center justify-center w-full  z-0 top-[20%] blur-[200px]">
+            <div className="absolute inset-0 flex items-center justify-center w-full  z-0 top-[20%] blur-[50px]">
                 <div className="relative w-full h-full ">
                     <Image
                         src="/assets/leadership_background.png"
@@ -119,8 +119,9 @@ export default function LeadershipSection() {
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                                 transition={{ duration: 0.8, delay: 2 }}
                             >
-                                <Image src="/assets/quote.svg" alt="quote" width={24} height={24} className='h-[24px] w-[24px] ' />
-                                <blockquote className="text-[#FFF] text-[32px] font-light leading-[48px]  ">
+                                <Image src="/assets/quote.svg" alt="quote" width={24} height={24} className='h-[20px] w-[20px] mb-1 ' />
+                                <blockquote
+                                    className="text-[#FFF] text-[32px] font-light leading-[48px] tracking-wider  ">
                                     &quot;We partner with our customers to enable them to digitally transform their business.
                                     That keeps them ahead of the competition and improves their bottom lines.&quot;
                                 </blockquote>
@@ -131,7 +132,7 @@ export default function LeadershipSection() {
                                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 transition={{ duration: 0.8, delay: 2.2 }}
                             >
-                                <div className="text-white text-[18px] mb-[16px]  font-bold">
+                                <div className="text-white text-[18px] mb-2  font-semibold">
                                     Mahmoud Soliman,
                                 </div>
                                 <div className="text-[#B2BABB] text-[18px] font-normal">
@@ -142,6 +143,6 @@ export default function LeadershipSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
