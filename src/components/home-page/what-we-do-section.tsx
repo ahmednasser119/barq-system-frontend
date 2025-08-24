@@ -182,16 +182,16 @@ export default function WhatWeDoSection() {
                     <Carousel
                         opts={{
                             align: "start",
-                            loop: true,
+                            loop: false,
                         }}
                         className="w-full"
                         setApi={setApi}
                     >
-                        <CarouselContent className="-ml-8 space-x-8">
+                        <CarouselContent className=" ml-0 space-x-6  ">
                             {services.map((service, index) =>
                                 <CarouselItem
                                     key={service.id}
-                                    className="pl-8 md:basis-1/2 lg:basis-1/3 "
+                                    className="md:basis-1/2 lg:basis-1/3 "
                                 >
                                     <motion.div
                                         className="relative group cursor-pointer"
@@ -201,7 +201,7 @@ export default function WhatWeDoSection() {
                                         onHoverStart={() => setHoveredItem(service.id)}
                                         onHoverEnd={() => setHoveredItem(null)}
                                     >
-                                        <div className="relative h-[625px] xl:min-w-[454px] rounded-[16px] overflow-hidden">
+                                        <div className="relative h-[625px] xl:min-w-[454px] rounded-[24px] overflow-hidden">
                                             {/* Service Image */}
                                             <motion.div
                                                 className="absolute inset-0"
@@ -214,7 +214,7 @@ export default function WhatWeDoSection() {
                                                     src={service.image}
                                                     alt={service.title}
                                                     fill
-                                                    className="object-cover"
+                                                    className="object-fill"
                                                 />
                                                 {/* Gradient overlay on top of the image */}
                                                 <div
