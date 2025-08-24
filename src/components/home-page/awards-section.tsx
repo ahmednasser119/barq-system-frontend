@@ -29,14 +29,14 @@ const AwardsSection = () => {
             id: 2,
             image: '/assets/awards/awards_3.png',
             title: 'AI-Dabbagh Leadership Summit Awards',
-            date: '2023',
+            date: '2014',
             description: 'Leadership Excellence in Technology Innovation'
         },
         {
             id: 3,
             image: '/assets/awards/awards_2.png',
             title: 'North Africa Service Provider Partner',
-            date: '2022',
+            date: '2013',
             description: 'Outstanding Service Provider Partnership'
         }
     ];
@@ -108,7 +108,7 @@ const AwardsSection = () => {
                                     style={{
                                         backgroundColor: 'black',
                                         opacity: overlayOpacity,
-                                        transform: "scale(1.5)"
+                                        transform: "scale(1.6)"
                                     }}
                                 />
                                 {/* SVG gradient element */}
@@ -127,8 +127,8 @@ const AwardsSection = () => {
                     </div>
 
                     {/* Right Side - Award Images Stack */}
-                    <div className="relative  w-1/2 flex justify-end gap-4 z-30">
-                        <div className=" flex flex-col gap-10 w-full">
+                    <div className="relative  w-1/2 flex justify-end gap-4 z-30 max-w-[620px]">
+                        <div className=" flex flex-col gap-10 w-full  justify-start items-start">
                             {awards.map((award, index) => (
                                 <motion.div
                                     key={award.id}
@@ -152,10 +152,11 @@ const AwardsSection = () => {
                                             <div
                                                 className="absolute   top-[-2px] left-0 right-0 bottom-0"
                                                 style={{
-                                                    background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.87%, #000 80%), url(${award.image}) lightgray -53.13px -50.453px / 179.4% 106.59% no-repeat`,
+                                                    background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 59.87%, #000 90%), url(${award.image}) lightgray -53.13px -50.453px / 179.4% 106.59% no-repeat`,
                                                     backgroundSize: 'cover',
-                                                    backgroundPositionX: index == 0 ? '20%' : 'center',
-                                                    backgroundPositionY: 'center',
+                                                    backgroundPositionX: index == 0 ? '22%' : 'center',
+                                                    backgroundPositionY: index == 0 ? '-45px' : 'center',
+                                                    aspectRatio: index == 0 ? '1/1.28' : '1/1',
                                                     backgroundRepeat: 'no-repeat'
                                                 }}
                                             />
