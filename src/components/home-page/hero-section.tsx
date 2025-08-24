@@ -117,14 +117,23 @@ export default function HeroSection() {
                 <div
                     className="absolute inset-0"
                     style={{
-                        background: "linear-gradient(180deg, #004ca4 23.25%, #000 82.5% )",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                        mixBlendMode: "overlay"
+                        background: "linear-gradient(0deg, #134A83 0%, #134A83 100%)",
+                        backgroundBlendMode: "color",
+                        mixBlendMode: "color"
                     }}
                 />
-                <div className="absolute inset-0 bg-black/10" />
+
+                {/* Gradient blur overlay for bottom 10% */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background: "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 20%)",
+                        backdropFilter: "blur(8px)",
+                        maskImage: "linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 10%)",
+                        WebkitMaskImage: "linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 10%)"
+                    }}
+                />
+                {/* <div className="absolute inset-0 bg-black/10" /> */}
                 <Navbar isHomePage={true} />
 
                 {/* Hero Content - Only show after video loads */}
