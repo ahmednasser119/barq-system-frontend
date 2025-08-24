@@ -302,13 +302,13 @@ export default function WhatWeDoSection() {
                     <div className="flex justify-center gap-4 mt-12">
                         <button
                             onClick={() => api?.scrollPrev()}
-                            className="w-14 h-14  flex items-center justify-center rounded-full border bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
+                            className="w-[58px] h-14   flex items-center justify-center rounded-full border-[3px] bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
-                            <Image src="/assets/icon-left.svg" alt="arrow-right" width={14} height={18} className='hover:fill-white' />
+                            <Image src="/assets/icon-left.svg" alt="arrow-right" width={14} height={18} className='  w-[14px] h-[18px] hover:fill-white' />
                         </button>
                         <button
                             onClick={() => api?.scrollNext()}
-                            className="w-14 h-14 flex items-center justify-center rounded-full border  bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
+                            className="w-[58px] h-14   flex items-center justify-center rounded-full border-[3px] bg-transparent border-[#5DADE2] text-[#5DADE2] hover:bg-transparent transition-all duration-300"
                         >
                             <Image src="/assets/icon.svg" alt="arrow-right" width={14} height={18} className='hover:fill-white' />
                         </button>
